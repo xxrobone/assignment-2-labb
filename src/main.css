@@ -1,3 +1,10 @@
 html {
   background-color: #FFF;
 }
+
+.para {
+  color: hotpink;
+  background-color: #282828;
+  padding: 6px 12px;
+  border-radius: 10px;
+}
