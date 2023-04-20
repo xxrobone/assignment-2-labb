@@ -17,12 +17,74 @@ body {
 }
 
 .wrapper {
+  position: relative;
   padding: 2rem;
   background-color: #121212;
   filter: drop-shadow(2px 2px 10px #fafafa80);
+  animation: bgChange 1s linear 0 infinite alternate;
 }
 
 p {
-  font-size: 2rem;
+  position: relative;
+  font-size: 1rem;
   filter: drop-shadow(5px 5px 5px #000, 10px 10px 10px #484848);
+  transform: translateX(0px);
+  animation: slideIn 800ms linear  forwards;
+}
+
+h2 {
+  animation: slideInRight 1100ms linear  forwards;
+}
+
+h1 {
+  animation: slideInUp 1200ms linear  forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-600px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(600px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideInUp {
+  from {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes bgChange {
+  0% {
+    background-color: #121212;
+  }
+  25% {
+    background-color: #353535;
+  }
+  50% {
+    background-color: #3d3d3d;
+  }
+  75% {
+    background-color: #3f3f3f;
+  }
+  100%{
+    background-color: #121212;
+  }
 }
